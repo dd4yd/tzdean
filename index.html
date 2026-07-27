@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatianna & David | Wedding Weekend</title>
+    <meta
+      name="description"
+      content="An elegant wedding website for Tatianna Zoe Bollwerk and David Dean in Xylokastro, Greece."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate-overlay" aria-live="polite">
+      <div class="gate-card">
+        <p class="eyebrow">Private Celebration</p>
+        <h1>Tatianna & David</h1>
+        <p class="gate-copy">
+          Enter the shared passcode to view the wedding website and details.
+        </p>
+        <form id="gate-form">
+          <label class="sr-only" for="passcode">Passcode</label>
+          <input id="passcode" name="passcode" type="password" placeholder="Enter passcode" />
+          <button type="submit">Enter</button>
+        </form>
+        <p id="gate-message" class="gate-message" role="status"></p>
+      </div>
+    </div>
+
+    <div id="site-content" class="site-content hidden">
+      <header class="topbar">
+        <a class="brand" href="#home">Tatianna & David</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#story">Our Story</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#travel">Travel</a>
+          <a href="#rsvp">RSVP</a>
+          <a href="#registry">Registry</a>
+          <a href="#party">Wedding Party</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">July 17, 2027 • Xylokastro, Greece</p>
+            <h2>A Summer Celebration by the Sea</h2>
+            <p>
+              Join us as we gather for an intimate evening of vows, music, and candlelit joy in the heart of the Aegean.
+            </p>
+            <a class="button" href="#rsvp">RSVP</a>
+          </div>
+        </section>
+
+        <section id="story" class="section section--split">
+          <div>
+            <p class="eyebrow">Our Story</p>
+            <h3>Two paths, one beautiful beginning.</h3>
+            <p>
+              We met in the kind of way that feels effortless in hindsight—through close friends, shared laughter, and a conversation that simply never wanted to end. From our first dinner to our first trip, every chapter has felt like a natural next step toward the life we are building together.
+            </p>
+            <p>
+              Our love is rooted in curiosity, comfort, and celebration. We find joy in the ordinary, the travel, and the quiet moments that make a life feel full. We are thrilled to welcome you to this next chapter, surrounded by the people who have shaped us.
+            </p>
+          </div>
+          <div class="card">
+            <h4>The Proposal</h4>
+            <p>
+              On a golden evening near the water, David asked Tatianna to spend forever with him. The moment was intimate, heartfelt, and unmistakably ours—and now we are ready to celebrate it with all of you.
+            </p>
+          </div>
+        </section>
+
+        <section id="schedule" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Event Details</p>
+            <h3>Weekend itinerary</h3>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <h4>Welcome Drinks</h4>
+              <p>7:00 PM — The Town Square Terrace — Open to all guests</p>
+            </article>
+            <article class="timeline-item">
+              <h4>Ceremony</h4>
+              <p>7:30 PM — Church in the Town Square — Open to all guests</p>
+            </article>
+            <article class="timeline-item">
+              <h4>Reception</h4>
+              <p>Immediately after — Rouvera — Open to all guests</p>
+            </article>
+            <article class="timeline-item">
+              <h4>Farewell Brunch</h4>
+              <p>10:00 AM, July 18 — Seaside Restaurant — Invite-only</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="travel" class="section section--split">
+          <div>
+            <p class="eyebrow">Travel & Accommodations</p>
+            <h3>Everything you need for a seamless stay.</h3>
+            <p>
+              Xylokastro is a beautiful coastal town with easy access to the airport and a relaxed pace for a summer escape. We recommend arriving the day before the ceremony so you can settle in and enjoy the town.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Recommended stays</h4>
+            <ul>
+              <li>Hotel Aegean View — 10-minute walk to the town square</li>
+              <li>Seaside Suites — Beachfront, ideal for couples and families</li>
+              <li>Villa Maris — Private terrace and sunset views</li>
+            </ul>
+            <p><strong>Airport:</strong> Kalamata Airport, approximately 1.5 hours away.</p>
+            <p><strong>Parking:</strong> Complimentary parking is available at both the ceremony and reception locations.</p>
+          </div>
+        </section>
+
+        <section id="rsvp" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">RSVP</p>
+            <h3>Please let us know by June 15, 2027.</h3>
+          </div>
+          <form class="rsvp-form" id="rsvp-form">
+            <label>
+              Attending
+              <select name="attending">
+                <option>Delighted to join</option>
+                <option>Regretfully cannot attend</option>
+              </select>
+            </label>
+            <label>
+              Guest count
+              <input type="number" name="guests" min="1" max="4" value="2" />
+            </label>
+            <label>
+              Meal preference
+              <select name="meal">
+                <option>Vegetarian</option>
+                <option>Seafood</option>
+                <option>Chicken</option>
+                <option>Beef</option>
+              </select>
+            </label>
+            <label>
+              Dietary restrictions
+              <input type="text" name="dietary" placeholder="Optional" />
+            </label>
+            <label>
+              Song request
+              <input type="text" name="song" placeholder="Optional" />
+            </label>
+            <label>
+              Notes
+              <textarea name="notes" rows="4" placeholder="Share any special notes here"></textarea>
+            </label>
+            <button class="button" type="submit">Send RSVP</button>
+            <p id="rsvp-message" class="form-message"></p>
+          </form>
+        </section>
+
+        <section id="registry" class="section section--split">
+          <div>
+            <p class="eyebrow">Registry</p>
+            <h3>Your presence is the greatest gift.</h3>
+            <p>
+              If you would like to honor us with a gift, we are grateful for your support and would love to help us begin this next chapter in style.
+            </p>
+          </div>
+          <div class="card">
+            <ul class="registry-list">
+              <li><a href="#">Amazon Wedding Registry</a></li>
+              <li><a href="#">Zola</a></li>
+              <li><a href="#">Crate & Barrel</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="party" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Wedding Party</p>
+            <h3>Meet the people who make life sparkle.</h3>
+          </div>
+          <div class="party-grid">
+            <article class="card">
+              <h4>Maid of Honor</h4>
+              <p>Elena Hart — She can turn a quiet evening into a full-blown celebration.</p>
+            </article>
+            <article class="card">
+              <h4>Best Man</h4>
+              <p>Marcus Vale — Loyal, funny, and always the first to offer a toast.</p>
+            </article>
+            <article class="card">
+              <h4>Bridesmaid</h4>
+              <p>Naomi Brooks — Known for her effortless style and impeccable instincts.</p>
+            </article>
+            <article class="card">
+              <h4>Groomsman</h4>
+              <p>Julian Price — The calm in every storm and the life of every party.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="gallery" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h3>Moments from our story so far.</h3>
+          </div>
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80" alt="Couple strolling by the sea" />
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Couple smiling in evening light" />
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80" alt="Couple enjoying a scenic walk" />
+          </div>
+        </section>
+
+        <section id="faq" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h3>Answers to the essentials.</h3>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Can I bring a plus one?</summary>
+              <p>Please refer to your invitation for guest details. We are keeping the weekend intimate.</p>
+            </details>
+            <details>
+              <summary>What is the dress code?</summary>
+              <p>We would love to see you in cocktail attire with a touch of summer elegance.</p>
+            </details>
+            <details>
+              <summary>Is there parking or shuttle service?</summary>
+              <p>Yes. Parking is available at both venues, and shuttle arrangements will be shared closer to the date.</p>
+            </details>
+            <details>
+              <summary>What is the weather like?</summary>
+              <p>Expect warm Mediterranean weather, typically sunny and bright with evenings by the sea.</p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
