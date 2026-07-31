@@ -33,5 +33,21 @@ gateForm?.addEventListener('submit', (event) => {
 
 rsvpForm?.addEventListener('submit', (event) => {
   event.preventDefault();
-  rsvpMessage.textContent = 'Thank you for your response. We cannot wait to celebrate with you.';
+
+  rsvpMessage.textContent = 'Sending your RSVP...';
+
+  fetch(rsvpForm.action, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json'
+    },
+    body: new FormData(rsvpForm)
+  })
+    .then(() => {
+      rsvpForm.reset();
+      rsvpMessage.textContent = 'Thank you for your response. We have received your RSVP.';
+    })
+    .catch(() => {
+      rsvpMessage.textContent = 'We could not send the RSVP automatically right now. Please try again in a moment.';
+    });
 });

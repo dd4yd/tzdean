@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Tatianna & David</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate-overlay" aria-live="polite">
+      <div class="gate-card">
+        <p class="eyebrow">Private Celebration</p>
+        <h1>Tatianna & David</h1>
+        <p class="gate-copy">Enter the shared passcode to view the wedding website and details.</p>
+        <form id="gate-form">
+          <label class="sr-only" for="passcode">Passcode</label>
+          <input id="passcode" name="passcode" type="password" placeholder="Enter passcode" />
+          <button type="submit">Enter</button>
+        </form>
+        <p id="gate-message" class="gate-message" role="status"></p>
+      </div>
+    </div>
+
+    <div id="site-content" class="site-content hidden">
+      <header class="topbar">
+        <a class="brand" href="index.html">Tatianna & David</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="story.html">Our Story</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="travel.html">Travel</a>
+          <a href="rsvp.html">RSVP</a>
+          <a href="registry.html">Registry</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h3>Moments from our story so far.</h3>
+          </div>
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80" alt="Couple strolling by the sea" />
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Couple smiling in evening light" />
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80" alt="Couple enjoying a scenic walk" />
+          </div>
+          <div class="odyssey-block">
+            <p class="eyebrow">A little Greek humor</p>
+            <h3>And yes, we may have a very specific homecoming plan.</h3>
+            <p>As a tribute to our favorite sea-faring legend, we’ve made a tiny addition to the end of the weekend: Matt Damon is officially trying to get home to his wife, Tatianna, just like in the Odyssey.</p>
+            <div class="odyssey-grid">
+              <div>
+                <img src="pics/odysseyre-jpg.webp" alt="Movie poster inspired by The Odyssey" />
+                <p class="odyssey-caption">A very determined traveler, with a very important destination.</p>
+              </div>
+              <div>
+                <img src="pics/annehath.jpeg" alt="A playful portrait inspired by Anne Hathaway" />
+                <p class="odyssey-caption">The one waiting at home, with excellent taste and a very clear opinion about arrival times.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

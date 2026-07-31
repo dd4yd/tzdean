@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule | Tatianna & David</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate-overlay" aria-live="polite">
+      <div class="gate-card">
+        <p class="eyebrow">Private Celebration</p>
+        <h1>Tatianna & David</h1>
+        <p class="gate-copy">Enter the shared passcode to view the wedding website and details.</p>
+        <form id="gate-form">
+          <label class="sr-only" for="passcode">Passcode</label>
+          <input id="passcode" name="passcode" type="password" placeholder="Enter passcode" />
+          <button type="submit">Enter</button>
+        </form>
+        <p id="gate-message" class="gate-message" role="status"></p>
+      </div>
+    </div>
+
+    <div id="site-content" class="site-content hidden">
+      <header class="topbar">
+        <a class="brand" href="index.html">Tatianna & David</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="story.html">Our Story</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="travel.html">Travel</a>
+          <a href="rsvp.html">RSVP</a>
+          <a href="registry.html">Registry</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Event Details</p>
+            <h3>Weekend itinerary</h3>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <h4>Welcome Drinks</h4>
+              <p>Friday, July 16, 2027 — 7:00 PM </p>
+            </article>
+            <article class="timeline-item">
+              <h4>Ceremony</h4>
+              <p>July 17, 2027 — 7:00 PM </p>
+            </article>
+            <article class="timeline-item">
+              <h4>Reception</h4>
+              <p> Rouvera - 8:00 PM </p>
+            </article>
+            <article class="timeline-item">
+              <h4>Beach Day</h4>
+              <p>July 18, 2027 2:00 PM — Anayar Beach Club</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

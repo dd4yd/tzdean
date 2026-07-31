@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | Tatianna & David</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate-overlay" aria-live="polite">
+      <div class="gate-card">
+        <p class="eyebrow">Private Celebration</p>
+        <h1>Tatianna & David</h1>
+        <p class="gate-copy">Enter the shared passcode to view the wedding website and details.</p>
+        <form id="gate-form">
+          <label class="sr-only" for="passcode">Passcode</label>
+          <input id="passcode" name="passcode" type="password" placeholder="Enter passcode" />
+          <button type="submit">Enter</button>
+        </form>
+        <p id="gate-message" class="gate-message" role="status"></p>
+      </div>
+    </div>
+
+    <div id="site-content" class="site-content hidden">
+      <header class="topbar">
+        <a class="brand" href="index.html">Tatianna & David</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="story.html">Our Story</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="travel.html">Travel</a>
+          <a href="rsvp.html">RSVP</a>
+          <a href="registry.html">Registry</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h3>Answers to the essentials.</h3>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Can I bring a plus one?</summary>
+              <p>Please refer to your invitation for guest details. We are keeping the weekend intimate.</p>
+            </details>
+            <details>
+              <summary>What is the dress code?</summary>
+              <p>We would love to see you in cocktail attire with a touch of summer elegance.</p>
+            </details>
+            <details>
+              <summary>Is there parking or shuttle service?</summary>
+              <p>Yes. Parking is available at both venues, and shuttle arrangements will be shared closer to the date.</p>
+            </details>
+            <details>
+              <summary>What is the weather like?</summary>
+              <p>Expect warm Mediterranean weather, typically sunny and bright with evenings by the sea.</p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
