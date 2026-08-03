@@ -38,12 +38,23 @@ rsvpForm?.addEventListener('submit', (event) => {
 
   rsvpMessage.textContent = 'Sending your RSVP...';
 
+  const formData = new FormData(rsvpForm);
+  const payload = {
+    name: formData.get('name') || '',
+    email: formData.get('email') || '',
+    attending: formData.get('attending') || '',
+    welcome_drinks: formData.get('welcome_drinks') === 'Yes',
+    sunday_beach_club: formData.get('sunday_beach_club') === 'Yes',
+    notes: formData.get('notes') || ''
+  };
+
   fetch(rsvpForm.action, {
     method: 'POST',
     headers: {
-      Accept: 'application/json'
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
     },
-    body: new FormData(rsvpForm)
+    body: JSON.stringify(payload)
   })
     .then(async (response) => {
       const data = await response.json().catch(() => ({}));

@@ -4,12 +4,20 @@ function doGet(e) {
 
 function doPost(e) {
   try {
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1') || SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+    const spreadsheetId = '1MN8rDdoNkDo9166J5a-NoStxBghyxvqG04LdOv9GLhM';
+    const sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName('Sheet1') || SpreadsheetApp.openById(spreadsheetId).getSheets()[0];
 
-    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
-    const row = [];
+    const payload = (() => {
+      if (!e.postData || !e.postData.contents) {
+        return e.parameter || {};
+      }
 
-    const payload = e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : (e.parameter || {});
+      try {
+        return JSON.parse(e.postData.contents);
+      } catch (error) {
+        return e.parameter || {};
+      }
+    })();
 
     const values = {
       timestamp: new Date().toISOString(),
@@ -21,7 +29,8 @@ function doPost(e) {
       notes: payload.notes || ''
     };
 
-    if (headers.length === 0) {
+    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    if (headers.length === 0 || headers.every((value) => !value)) {
       sheet.appendRow(['Timestamp', 'Name', 'Email', 'Attending', 'Welcome Drinks', 'Sunday Beach Club', 'Notes']);
     }
 
