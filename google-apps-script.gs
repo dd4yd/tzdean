@@ -1,7 +1,32 @@
+function createResponsePage(title, message) {
+  return HtmlService.createHtmlOutput(
+    `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>${title}</title>
+        <style>
+          body { font-family: Arial, sans-serif; color: #222; margin: 2rem; }
+          h1 { color: #1a202c; }
+          p { line-height: 1.6; }
+          a { color: #1a73e8; text-decoration: none; }
+          .card { max-width: 42rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px; background: #fff; box-shadow: 0 16px 32px rgba(0,0,0,.08); }
+        </style>
+      </head>
+      <body>
+        <div class="card">
+          <h1>${title}</h1>
+          <p>${message}</p>
+          <p><a href="https://thedeans.site/rsvp.html" target="_blank">Return to the RSVP page</a></p>
+        </div>
+      </body>
+    </html>`
+  );
+}
+
 function doGet(e) {
-  return ContentService
-    .createTextOutput(JSON.stringify({ message: 'RSVP endpoint is ready.' }))
-    .setMimeType(ContentService.MimeType.JSON);
+  return createResponsePage('RSVP endpoint is ready.', 'The RSVP endpoint is available. Submit the form from the wedding website.');
 }
 
 function doPost(e) {
@@ -48,12 +73,8 @@ function doPost(e) {
 
     sheet.appendRow(rowValues);
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return createResponsePage('RSVP Submitted', 'Your RSVP has been received and the spreadsheet has been updated.');
   } catch (error) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: error.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return createResponsePage('Submission Error', `There was an issue saving your RSVP: ${error.message}`);
   }
 }

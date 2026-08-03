@@ -33,26 +33,8 @@ gateForm?.addEventListener('submit', (event) => {
   }
 });
 
-rsvpForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-
+rsvpForm?.addEventListener('submit', () => {
   rsvpMessage.textContent = 'Sending your RSVP...';
-
-  const formData = new FormData(rsvpForm);
-
-  fetch(rsvpForm.action, {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors'
-  })
-    .then(() => {
-      rsvpForm.reset();
-      rsvpMessage.textContent = 'Thank you for your response. We have received your RSVP.';
-    })
-    .catch((error) => {
-      console.error('RSVP submit error:', error);
-      rsvpMessage.textContent = `We could not send the RSVP automatically right now. ${error.message}`;
-    });
 });
 
 function closeMobileNav() {
