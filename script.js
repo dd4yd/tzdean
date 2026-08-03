@@ -39,40 +39,15 @@ rsvpForm?.addEventListener('submit', (event) => {
   rsvpMessage.textContent = 'Sending your RSVP...';
 
   const formData = new FormData(rsvpForm);
-  const payload = {
-    name: formData.get('name') || '',
-    email: formData.get('email') || '',
-    attending: formData.get('attending') || '',
-    welcome_drinks: formData.get('welcome_drinks') === 'Yes',
-    sunday_beach_club: formData.get('sunday_beach_club') === 'Yes',
-    notes: formData.get('notes') || ''
-  };
 
   fetch(rsvpForm.action, {
     method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
+    body: formData,
+    mode: 'no-cors'
   })
-    .then(async (response) => {
-      const text = await response.text();
-      let data = {};
-      try {
-        data = JSON.parse(text);
-      } catch (error) {
-        console.error('Failed to parse response JSON:', text);
-      }
-
-      if (response.ok && data.success !== false) {
-        rsvpForm.reset();
-        rsvpMessage.textContent = 'Thank you for your response. We have received your RSVP.';
-      } else {
-        const errorMessage = data.error || response.statusText || 'Submission failed';
-        console.error('RSVP submission failed:', response.status, errorMessage, text);
-        throw new Error(errorMessage);
-      }
+    .then(() => {
+      rsvpForm.reset();
+      rsvpMessage.textContent = 'Thank you for your response. We have received your RSVP.';
     })
     .catch((error) => {
       console.error('RSVP submit error:', error);

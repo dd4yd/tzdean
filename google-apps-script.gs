@@ -1,5 +1,7 @@
 function doGet(e) {
-  return HtmlService.createHtmlOutput('RSVP endpoint is ready.');
+  return ContentService
+    .createTextOutput(JSON.stringify({ message: 'RSVP endpoint is ready.' }))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 function doPost(e) {
@@ -46,8 +48,12 @@ function doPost(e) {
 
     sheet.appendRow(rowValues);
 
-    return ContentService.createTextOutput(JSON.stringify({ success: true })).setMimeType(ContentService.MimeType.JSON);
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: true }))
+      .setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({ success: false, error: error.message })).setMimeType(ContentService.MimeType.JSON);
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: false, error: error.message }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 }
