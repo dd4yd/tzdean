@@ -184,6 +184,10 @@ button:hover,
   font-weight: 600;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -418,6 +422,35 @@ button:hover,
   font-weight: 600;
 }
 
+.event-options {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0.7rem 0 0.2rem;
+}
+
+.event-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.event-option__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 600;
+}
+
+.event-option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
 .faq-list {
   display: grid;
   gap: 0.8rem;
@@ -448,6 +481,20 @@ details[open] summary {
 }
 
 @media (max-width: 560px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(140, 107, 69, 0.24);
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(45, 36, 31, 0.06);
+  }
+
   .hero {
     padding: 3rem 1rem;
   }
@@ -458,9 +505,41 @@ details[open] summary {
 
   .topbar {
     padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
   }
 
   .nav {
-    gap: 0.65rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 100%;
+    padding-top: 0.2rem;
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(45, 36, 31, 0.08);
+  }
+
+  .nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .event-option {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1rem;
   }
 }
