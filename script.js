@@ -57,16 +57,26 @@ rsvpForm?.addEventListener('submit', (event) => {
     body: JSON.stringify(payload)
   })
     .then(async (response) => {
-      const data = await response.json().catch(() => ({}));
+      const text = await response.text();
+      let data = {};
+      try {
+        data = JSON.parse(text);
+      } catch (error) {
+        console.error('Failed to parse response JSON:', text);
+      }
+
       if (response.ok && data.success !== false) {
         rsvpForm.reset();
         rsvpMessage.textContent = 'Thank you for your response. We have received your RSVP.';
       } else {
-        throw new Error(data.error || 'Submission failed');
+        const errorMessage = data.error || response.statusText || 'Submission failed';
+        console.error('RSVP submission failed:', response.status, errorMessage, text);
+        throw new Error(errorMessage);
       }
     })
-    .catch(() => {
-      rsvpMessage.textContent = 'We could not send the RSVP automatically right now. Please try again in a moment.';
+    .catch((error) => {
+      console.error('RSVP submit error:', error);
+      rsvpMessage.textContent = `We could not send the RSVP automatically right now. ${error.message}`;
     });
 });
 
