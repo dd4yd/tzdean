@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xylokastro | Tatianna & David</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate-overlay" aria-live="polite">
+      <div class="gate-card">
+        <p class="eyebrow">Private Celebration</p>
+        <h1>Tatianna & David</h1>
+        <p class="gate-copy">Enter the shared passcode to view the wedding website and details.</p>
+        <form id="gate-form">
+          <label class="sr-only" for="passcode">Passcode</label>
+          <input id="passcode" name="passcode" type="password" placeholder="Enter passcode" />
+          <button type="submit">Enter</button>
+        </form>
+        <p id="gate-message" class="gate-message" role="status"></p>
+      </div>
+    </div>
+
+    <div id="site-content" class="site-content hidden">
+      <header class="topbar">
+        <a class="brand" href="index.html">Tatianna & David</a>
+        <div class="topbar-actions">
+          <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+            Menu
+          </button>
+          <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="travel.html">Travel</a>
+            <a href="xylokastro.html">Xylokastro</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="rsvp.html">RSVP</a>
+            <a href="registry.html">Registry</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <p class="eyebrow">Xylokastro Guide</p>
+          <h3>What to do, what to bring, and how to make the most of your stay.</h3>
+          <p>Discover our favorite local experiences, practical travel tips, and must-pack items for a smooth and memorable trip to Xylokastro.</p>
+        </section>
+
+        <section class="section section--split">
+          <div class="card">
+            <h4>Local recommendations</h4>
+            <p>Stroll the seaside promenade, explore the harbor, and enjoy the charming cafes and tavernas near the hotel. Xylokastro is small but full of character — it’s perfect for relaxed walks, coffee by the sea, and easy evenings with friends.</p>
+            <ul>
+              <li>Visit the central beach and harbor</li>
+              <li>Try seafood and mezze at a local taverna</li>
+              <li>Take a short drive to the ancient site of Corinth or the artsy village of Derveni</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>Best things to do</h4>
+            <p>There’s plenty to enjoy in and around Xylokastro for both quick visits and longer stays.</p>
+            <ul>
+              <li>Relax at the beach and swim in the Ionian waters</li>
+              <li>Walk the coastal path toward the marble village of Stymfalia</li>
+              <li>Take a sunset boat ride along the gulf</li>
+              <li>Explore market stalls and local bakeries in town</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section section--split">
+          <div class="card">
+            <h4>What to pack</h4>
+            <p>Pack for warm days, cooler evenings, and effortless travel.</p>
+            <ul>
+              <li>Light layers, linen, and comfortable walking shoes</li>
+              <li>Swimwear, sun hat, and sunscreen</li>
+              <li>Evening outfits for dinner and wedding events</li>
+              <li>A reusable water bottle and small day bag</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>Travel essentials</h4>
+            <p>These items will make navigating Greece easier and more comfortable.</p>
+            <ul>
+              <li>Passport and travel documents</li>
+              <li>International Driving Permit if you rent a car</li>
+              <li>Power adapter for European outlets</li>
+              <li>Phone charger, portable battery, and travel insurance</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
