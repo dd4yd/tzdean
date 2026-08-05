@@ -7,7 +7,7 @@ const rsvpMessage = document.getElementById('rsvp-message');
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const primaryNav = document.querySelector('.nav');
 
-const correctPasscode = 'summerlove2027';
+const correctPasscode = 'agapimou';
 
 function unlockSite() {
   gate.style.display = 'none';
