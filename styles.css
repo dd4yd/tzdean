@@ -271,7 +271,7 @@ button:hover,
   align-items: center;
   padding: 4rem 1.5rem;
   background: linear-gradient(90deg, rgba(22, 84, 140, 0.78), rgba(12, 43, 85, 0.5)),
-    url("pics/IMG_0084.JPG") center/cover;
+    url("pics/IMG_6236.jpeg") center/cover;
   position: relative;
   overflow: hidden;
 }
@@ -319,7 +319,7 @@ button:hover,
 
 .hero-subtitle {
   margin: 1rem 0 0 0;
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 500;
   color: #ffffff;
   line-height: 1.2;
@@ -676,4 +676,16 @@ details[open] summary {
     align-items: flex-start;
     border-radius: 1rem;
   }
+}
+
+.footer-banner {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
 }
