@@ -4,6 +4,8 @@ const gateForm = document.getElementById('gate-form');
 const gateMessage = document.getElementById('gate-message');
 const rsvpForm = document.getElementById('rsvp-form');
 const rsvpMessage = document.getElementById('rsvp-message');
+const attendingSelect = document.querySelector('select[name="attending"]');
+const eventOptions = document.querySelector('.event-options');
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const primaryNav = document.querySelector('.nav');
 
@@ -32,6 +34,23 @@ gateForm?.addEventListener('submit', (event) => {
     gateMessage.textContent = 'That passcode is not correct. Please try again.';
   }
 });
+
+// Show/hide event options based on attending selection
+if (attendingSelect && eventOptions) {
+  function toggleEventOptions() {
+    if (attendingSelect.value === 'Delighted to join') {
+      eventOptions.style.display = 'block';
+    } else {
+      eventOptions.style.display = 'none';
+    }
+  }
+  
+  // Set initial state
+  toggleEventOptions();
+  
+  // Listen for changes
+  attendingSelect.addEventListener('change', toggleEventOptions);
+}
 
 rsvpForm?.addEventListener('submit', () => {
   rsvpMessage.textContent = 'Sending your RSVP...';
