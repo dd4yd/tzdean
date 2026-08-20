@@ -648,6 +648,7 @@ details[open] summary {
     align-items: center;
     justify-content: space-between;
     gap: 0.55rem;
+    position: relative;
   }
 
   .nav {
@@ -656,6 +657,15 @@ details[open] summary {
     gap: 0.55rem;
     width: 100%;
     padding-top: 0.2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 8px 24px rgba(16, 44, 78, 0.12);
   }
 
   .nav.is-open {
@@ -687,5 +697,12 @@ details[open] summary {
   color: #ffffff;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
-  margin-top: 2rem;
+  margin-top: 0;
+}
+
+.wedding-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
 }
