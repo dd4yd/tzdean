@@ -521,6 +521,12 @@ button:hover,
   border-radius: 1rem;
 }
 
+@media (min-width: 900px) {
+  .odyssey-grid img {
+    height: 360px;
+  }
+}
+
 .odyssey-caption {
   font-size: 0.95rem;
   color: var(--muted);
