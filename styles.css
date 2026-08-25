@@ -518,12 +518,14 @@ button:hover,
   width: 100%;
   height: 280px;
   object-fit: cover;
+  object-position: center;
   border-radius: 1rem;
 }
 
 @media (min-width: 900px) {
   .odyssey-grid img {
-    height: 360px;
+    height: 420px;
+    object-position: center 18%;
   }
 }
 
