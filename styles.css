@@ -276,6 +276,15 @@ button:hover,
   overflow: hidden;
 }
 
+@media (min-width: 900px) {
+  .hero {
+    background-image: linear-gradient(90deg, rgba(22, 84, 140, 0.78), rgba(12, 43, 85, 0.5)),
+      url("pics/IMG_0084.JPG");
+    background-position: center 38%;
+    background-size: cover;
+  }
+}
+
 .hero::before {
   content: "";
   position: absolute;
